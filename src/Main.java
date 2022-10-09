@@ -59,7 +59,7 @@ public class Main {
         }
         return sumSalary;
     }
-    public static double getAverageSalary () {
+    public static double getAverageSalary () { // *
         double averageSalary = 0;
         int sum = calculateSumSalary();
         for (int t = 0; t < employee.length; t++) {

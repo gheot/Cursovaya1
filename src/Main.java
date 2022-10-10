@@ -52,9 +52,9 @@ public class Main {
     }
     public static int calculateSumSalary () {
         int sumSalary = 0;
-        for (int m = 0; m < employee.length; m++) {
-            if (employee[m] != null) {
-                sumSalary = sumSalary + employee[m].getSalary();
+        for (int i = 0; i < employee.length; i++) {
+            if (employee[i] != null) {
+                sumSalary = sumSalary + employee[i].getSalary();
             }
         }
         return sumSalary;
@@ -84,13 +84,13 @@ public class Main {
     }
     public static Employee getMinSalary () {
         int minSalary = 200000;
-        Employee targetEmployee2 = null;
+        Employee targetEmployee = null;
         for (int s = 0; s < employee.length; s++) {
             if (employee[s] != null && employee[s].getSalary() < minSalary) {
                 minSalary = employee[s].getSalary();
-                targetEmployee2 = employee[s];
+                targetEmployee = employee[s];
             }
         }
-        return targetEmployee2;
+        return targetEmployee;
     }
 }

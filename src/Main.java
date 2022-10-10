@@ -59,16 +59,6 @@ public class Main {
         }
         return sumSalary;
     }
-    public static double getAverageSalary () { // *
-        double averageSalary = 0;
-        int sum = calculateSumSalary();
-        for (int t = 0; t < employee.length; t++) {
-            if (employee[t] != null) {
-                averageSalary = (double) sum / (t+1);
-            }
-        }
-        return averageSalary;
-    }
     public static Employee getMaxSalary () {
         int maxSalary = 0;
         Employee targetEmployee = null;
@@ -79,6 +69,18 @@ public class Main {
             }
         }
         return targetEmployee;
+    }
+    public static double getAverageSalary () {
+        double averageSalary = 0;
+        int sum = calculateSumSalary();
+        int notNull = 0;
+        for (int t = 0; t < employee.length; t++) {
+            if (employee[t] != null) {
+                notNull++;
+            }
+        }
+        averageSalary = (double) sum / notNull;
+        return averageSalary;
     }
     public static Employee getMinSalary () {
         int minSalary = 200000;
